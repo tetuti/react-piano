@@ -8,4 +8,4 @@ A potential workaround would be to start the oscillator in a useEffect hook (wit
 
 A live demo of the app can be found [here](https://react-piano.netlify.com/) (best viewed on a phone, minimal work done on responsiveness).
 
-The sound quality is rather poor and sound mixing is atrocious. There's also a bug whem pressing a key down and releasing it whilst moving the mouse away where the tone gets stuck due using the mouse/touch-up event for stopping the oscillator. 
+The sound quality is rather poor and sound mixing is atrocious. There's also a bug when pressing a key down and releasing it whilst moving the mouse away from said key where the tone gets stuck. This is due to me using the mouse/touch-up/down events for starting and stopping the oscillator in order to be able to allow a key to "held". 
