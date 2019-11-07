@@ -1,68 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React piano
 
-## Available Scripts
+This is the outcome of my 5 year old daughter telling me here ["piano book"](https://usborne.com/browse-books/catalogue/product/1/8637/my-first-keyboard-book/) broke. Instead of throwing it in the trash I told here I could make her a new piano she could play her notes on.
 
-In the project directory, you can run:
+The application is written in React using hooks and the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API). The Web Audio API is a strange beast, particularly in regards to the [oscillator](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type) which can only be started once, meaning we have to create a new oscillator each time we want to play a note.
 
-### `npm start`
+A potential workaround would be to start the oscillator in a useEffect hook (with a .stop() cleanup callback) and rather connecting and disconnecting the oscillator to our destination, something that I have yet to try out as I tried to get this made before my daugthers bedtime :blush:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A live demo of the app can be found [here](https://react-piano.netlify.com/) (best viewed on a phone, minimal work done on responsiveness).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The sound quality is rather poor and sound mixing is atrocious. There's also a bug whem pressing a key down and releasing it whilst moving the mouse away where the tone gets stuck due using the mouse/touch-up event for stopping the oscillator. 
