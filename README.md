@@ -1,6 +1,6 @@
 # React piano
 
-This is the outcome of my 5 year old daughter telling me here ["piano book"](https://usborne.com/browse-books/catalogue/product/1/8637/my-first-keyboard-book/) broke. Instead of throwing it in the trash I told here I could make her a new piano she could play her notes on.
+This is the outcome of my 5 year old daughter telling me here ["piano book"](https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/6/2/5/1/9200000028811526.jpg) broke. Instead of throwing it in the trash I told here I could make her a new piano she could play her notes on.
 
 The application is written in React using hooks and the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API). The Web Audio API is a strange beast, particularly in regards to the [oscillator](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type) which can only be started once, meaning we have to create a new oscillator each time we want to play a note.
 
